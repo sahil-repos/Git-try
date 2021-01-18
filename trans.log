@@ -1,0 +1,107 @@
+git rm --cached file.txt 
+this will untrack the file
+
+git mv file.txt file_newName.txt
+this will rename the file to file_newName
+
+git rm -rf .git
+deletes .git folder
+
+git log
+shows commit page
+press q to exit log page
+
+git log -p
+shows diff of commits aswell
+
+git log -p -2
+shows 2 diff commits
+
+git log --stat
+summary like data of commits
+
+git log --pretty=oneline
+shows all commits 1 line 1 commit, useful for printing
+--pretty=full -> show author committer and messg
+--pretty=short->show author msg
+
+git log --since=2.days
+shows work of last 2 days
+--since=3.months
+--since=2.years
+--since=4.weeks
+
+filter in gitlog
+git log --pretty=format:"%h -- %an"
+displays commits in format
+ %h-- %an
+hash commit--author name
+
+git commit --amend
+->opens vim editor
+press i to edit
+after edit press esc
+then type :wq then enter
+
+unstaging 
+git restore --staged file.txt
+deletes the new changes in file.txt
+
+unmodify file to prev commit
+git checkout -- file.txt
+
+git checkout -f
+to go back to previous commit 
+
+setting alias for commands
+$git config --global alias.st status
+sets status 's alias as st so u can use st instead os status
+
+branching
+$git checkout -b branchName
+creates a new branch with branch name and switches to it
+
+$git branch 
+lists all branches
+
+$git checkout master
+switch back to master 
+
+
+$git config --global alias.unstage 'restore --staged --'
+$git unstage this.txt
+remove this.txt from staging
+
+$git config --global alias.last 'log -p -1'
+$git last
+shows last commit
+
+$git merge branchname
+merge branch into current working branch
+
+$git branch -v
+displays branches commit hashes and commit mssgs
+
+$git branch --merged
+displays merged branches
+$git branch --no-merged
+displays not merged branches
+
+$git branch -d branchname
+deletes the merged branch
+=>gives warning if branchname is not merged
+
+$git branch -D branchname
+deletes branch ignoring the fact it is merged or not
+
+$git push origin master 
+push to remote
+
+$git push origin branchname
+push branch to remote
+
+$git push -d origin branchname
+deletes branch from remote
+
+
+
